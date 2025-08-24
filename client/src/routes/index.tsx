@@ -9,6 +9,7 @@ import {
   RequestPasswordReset,
 } from '~/components/Auth';
 import AgentMarketplace from '~/components/Agents/Marketplace';
+import Workflows from '~/components/Workflows/Workflows';
 import { OAuthSuccess, OAuthError } from '~/components/OAuth';
 import { AuthContextProvider } from '~/hooks/AuthContext';
 import RouteErrorBoundary from './RouteErrorBoundary';
@@ -113,6 +114,10 @@ export const router = createBrowserRouter([
           {
             path: 'agents/:category',
             element: <AgentMarketplace />,
+          },
+          {
+            path: 'workflows',
+            element: <Workflows />,
           },
         ],
       },
